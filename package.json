@@ -4,8 +4,9 @@
   "description": "MapSCII is a Braille & ASCII world map renderer for your console, based on OpenStreetMap",
   "main": "main.js",
   "scripts": {
-    "lint": "eslint src",
-    "start": "node main",
+    "lint": "eslint src --ext .ts",
+    "start": "ts-node main.ts",
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
@@ -45,8 +46,15 @@
     "yargs": "^15.4.1"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/keypress": "^2.0.30",
+    "@types/node": "^25.0.3",
+    "@types/node-fetch": "^2.6.13",
     "eslint": "^7.8.1",
     "eslint-plugin-jest": "^24.0.0",
-    "jest": "^26.4.2"
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
